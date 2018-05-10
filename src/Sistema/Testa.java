@@ -6,23 +6,30 @@
 package Sistema;
 
 import java.io.PrintStream;
-import java.util.*;
 
-public class DaoCliente{
+/**
+ *
+ * @author adm
+ */
+public class Testa {
     
     
+    
+        public static void main(String[] args) {
         
-    public boolean salvarCliente(PessoaFisica obj){
-        
-    
-         
-     try
+            
+            PessoaFisica c1 = new PessoaFisica(10,"Daniel","ovidio vilela","993911490","F","46353698895");
+            salvarCliente(c1);
+    }
+
+    private static void salvarCliente(PessoaFisica c1) {
+         try
      {
            
             //utilizar a classe PrintStream para gerar relatorios (arquivo texto)
             
             PrintStream ps= new PrintStream("C:\\Users\\itach\\Desktop\\CadastroCliente.txt");
-            ps.println(obj);
+            ps.println(c1);
             // persiste os dados no disco
             ps.flush();
         }
@@ -31,7 +38,6 @@ public class DaoCliente{
         {
             System.out.println("Excecao: "+ e);
         }
-    return true;
-        
-}
+  
+    }
 }

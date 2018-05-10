@@ -11,7 +11,7 @@ import java.io.*;
  * @author adm
  */
 public abstract class Cliente implements Serializable {
-    private int codigo;
+    int codigo;
     private String nome;
     private String endereco;
     private String telefone;
@@ -89,6 +89,12 @@ public abstract class Cliente implements Serializable {
         }
         return true;
     }
+    
+    @Override
+    public String toString() {
+        return   "" + codigo + ";" + nome + ";" + endereco + ";" + telefone + ";" + Tipo + ';';
+    }
+    
     
     
     

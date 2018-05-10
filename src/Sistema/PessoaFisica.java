@@ -12,7 +12,7 @@ package Sistema;
 public class PessoaFisica extends Cliente {
     private String cpf;
 
-    public PessoaFisica(String cpf, int codigo, String nome, String endereco, String telefone, String Tipo) {
+    public PessoaFisica(int codigo, String nome, String endereco, String telefone, String Tipo,String cpf) {
         super(codigo, nome, endereco, telefone, Tipo);
         this.cpf = cpf;
     }
@@ -24,5 +24,13 @@ public class PessoaFisica extends Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    @Override
+    public String toString() {
+        return  "" +getCodigo() +";"+getNome() +";"+getEndereco()+";"+getTelefone()+";"+getTipo()+";"+getCpf()+";";
+    }
+
+  
+    
     
 }
