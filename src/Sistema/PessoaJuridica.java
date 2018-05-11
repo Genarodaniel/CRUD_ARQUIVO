@@ -13,7 +13,7 @@ public class PessoaJuridica extends Cliente{
     private String cnpj;
     private int ie;
 
-    public PessoaJuridica(String cnpj, int ie, int codigo, String nome, String endereco, String telefone, String Tipo) {
+    public PessoaJuridica(int codigo, String nome, String endereco, String telefone, String Tipo,String cnpj,int ie) {
         super(codigo, nome, endereco, telefone, Tipo);
         this.cnpj = cnpj;
         this.ie = ie;
@@ -34,6 +34,15 @@ public class PessoaJuridica extends Cliente{
     public void setIe(int ie) {
         this.ie = ie;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    
     
     
 }

@@ -10,7 +10,8 @@ import java.util.*;
  * @author adm
  */
 public class Dados {
-    public static List <Cliente> listaClientes = new ArrayList <>(); 
+    public static List <PessoaJuridica> listaPj = new ArrayList <>(); 
+    public static List <PessoaFisica> listaPf = new ArrayList<>();
     public static List <Fornecedor> listaFornecedores = new ArrayList <>(); 
     public static List <Produto> listaProdutos = new ArrayList <>(); 
     public static List listaCompras = new ArrayList <>(); 
