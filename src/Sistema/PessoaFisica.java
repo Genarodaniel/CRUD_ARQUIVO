@@ -5,11 +5,13 @@
  */
 package Sistema;
 
+import java.io.Serializable;
+
 /**
  *
  * @author adm
  */
-public class PessoaFisica extends Cliente {
+public class PessoaFisica extends Cliente  implements Serializable {
     private String cpf;
 
     public PessoaFisica(int codigo, String nome, String endereco, String telefone, String Tipo,String cpf) {

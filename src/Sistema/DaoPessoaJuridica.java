@@ -6,6 +6,7 @@
 package Sistema;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.*;
 /**
@@ -15,17 +16,17 @@ import java.util.*;
 
 public class DaoPessoaJuridica {
     
-    public List <PessoaJuridica> getLista(){
-        return Dados.listaPj;
-    }
-    
+
     public  boolean salvarPj(PessoaJuridica obj){
             
         try 
         { 
-            PrintStream ps = new PrintStream("C:\\Users\\itach\\Desktop\\cadastroPj.txt");
-            ps.println(obj);
-            ps.flush();
+             FileOutputStream fos = new FileOutputStream("C:\\Users\\itach\\Desktop\\CadastroCliente.txt",true);
+             PrintStream dos = new PrintStream(fos);
+          
+            dos.println(obj);
+            
+            dos.flush();
             return true;
             
         }

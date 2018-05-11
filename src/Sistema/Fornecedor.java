@@ -12,10 +12,12 @@ package Sistema;
 public class Fornecedor extends PessoaJuridica {
     private String contato;
 
-    public Fornecedor(String contato, String cnpj, int ie, int codigo, String nome, String endereco, String telefone, String Tipo) {
-        super(cnpj, ie, codigo, nome, endereco, telefone, Tipo);
+    public Fornecedor(String contato, int codigo, String nome, String endereco, String telefone, String Tipo, String cnpj, int ie) {
+        super(codigo, nome, endereco, telefone, Tipo, cnpj, ie);
         this.contato = contato;
     }
+
+    
 
     public String getContato() {
         return contato;

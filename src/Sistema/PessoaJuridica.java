@@ -5,11 +5,13 @@
  */
 package Sistema;
 
+import java.io.Serializable;
+
 /**
  *
  * @author adm
  */
-public class PessoaJuridica extends Cliente{
+public class PessoaJuridica extends Cliente implements Serializable{
     private String cnpj;
     private int ie;
 
@@ -41,6 +43,13 @@ public class PessoaJuridica extends Cliente{
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
+    }
+
+    @Override
+    public String toString() {
+        return  "" +getCodigo() +";"+getNome() +";"+getEndereco()+";"
+                +getTelefone()+";"+getTipo()+";"+getCnpj()+";"
+                +getIe()+";";
     }
     
     
